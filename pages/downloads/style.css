@@ -1,0 +1,284 @@
+/* a lot of styling for a simple page, ik */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#downloads,
+#item-view {
+    padding: 16px;
+    display: grid;
+    height: calc(100% - 32px);
+    width: calc(100% - 32px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    gap: 8px;
+}
+
+.section {
+    font-size: 24px;
+    margin-left: 12px;
+}
+
+.items {
+    width: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(232px, auto));
+    grid-template-rows: repeat(auto-fill, 256px);
+
+    gap: 8px;
+    justify-self: center;
+}
+
+.items > .item {
+    display: grid;
+    grid-template-rows: 128px 32px 64px 32px;
+    height: 256px;
+    background-color: #dddddd;
+}
+.items > .item > .cover {
+    height: 160px;
+    width: 100%;
+    background-size: auto;
+    object-fit: cover;
+}
+
+.items > .item > .title {
+    background-color: #00000080;
+    padding: 8px;
+    font-size: 16px;
+    color: white;
+}
+.items > .item > .description {
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #303030;
+    color: #ccc;
+}
+
+.items > .item > .view {
+    border: none;
+    background-color: #ff7f7f;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.items > .item > .view:focus {
+    outline: none;
+}
+
+.items > .item > .view:hover {
+    background-color: #e57272;
+}
+.items > .item > .view:active {
+    background-color: #cc6666;
+}
+
+/* Item View stuffz */
+
+#item-view > .location {
+    height: 16px;
+    font-size: 16px;
+    margin-left: 12px;
+    user-select: none;
+}
+#item-view > .location > #category {
+    opacity: 0.5;
+}
+#item-view > .location > #category::after {
+    content: "\203a";
+    padding-left: 8px;
+    padding-right: 2px;
+    position: relative;
+    top: -1px;
+}
+
+#item-view > .location > #close {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    min-width: 48px;
+    min-height: 48px;
+}
+#item-view > .location > #close:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+#item-view > .location > #close::after {
+    content: "\2715";
+    position: absolute;
+    right: 18px;
+    top: 12px;
+}
+
+#item-view > #images {
+    margin-top: 8px;
+    margin-left: -16px;
+    min-width: 100%;
+    margin-right: -16px;
+    height: 448px;
+    overflow: hidden;
+    display: flex;
+    user-select: none;
+    background-color: #bbb;
+}
+#item-view > #images > img {
+    min-width: 100%;
+    width: auto;
+    background-size: auto;
+    object-fit: cover;
+    height: 448px;
+}
+#item-view > #images > img.invisible {
+    position: absolute;
+    bottom: 100%;
+    /* did it like this cause then all images will load at once */
+}
+#item-view > #images > #image-control {
+    position: absolute;
+    height: 48px;
+    width: fit-content;
+
+    align-self: flex-end;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 0px;
+    user-select: none;
+}
+#item-view > #images > #image-control > span {
+    height: 48px;
+    width: 48px;
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 6px;
+    overflow: hidden;
+}
+#item-view > #images > #image-control > span::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: inherit;
+    transform: translateY(23px);
+    position: absolute;
+    background: white;
+}
+#item-view > #images > #image-control > span.selected::after {
+    background: #303030;
+}
+
+@keyframes image-control-playing {
+    from {
+        transform: translateY(15px);
+        width: 0px;
+    }
+    to {
+        transform: translateY(15px);
+        width: 48px;
+    }
+}
+
+#item-view > #images > #image-control > span:hover {
+    cursor: pointer;
+}
+
+/*                        v  misspelled the word without this letter so i braced it cause i thought i'd be funny */
+/* Actual page content be(g)ings here :3 */
+
+#item-view > .title {
+    font-size: 32px;
+    margin-top: 8px;
+    margin-left: 32px;
+}
+#item-view > .text-html {
+    width: 768px;
+    justify-self: center;
+    margin-bottom: 32px;
+    padding-bottom: 8px;
+}
+#item-view > .download {
+    position: fixed;
+    bottom: 0px;
+    background-color: #303030;
+    height: 32px;
+    padding: 8px;
+    width: calc(100% - 16px);
+    margin-left: -16px;
+    margin-right: -16px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px;
+}
+
+#item-view > .download > .main-download {
+    border: none;
+    background-color: #ff7f7f;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#item-view > .download > .main-download:focus {
+    outline: none;
+}
+
+#item-view > .download > .main-download:hover {
+    background-color: #e57272;
+}
+#item-view > .download > .main-download:active {
+    background-color: #cc6666;
+}
+
+#item-view > .download > .view-github {
+    border: none;
+    background-color: #606060;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+#item-view > .download > .view-github:focus {
+    outline: none;
+}
+
+#item-view > .download > .view-github:hover {
+    background-color: #505050;
+}
+#item-view > .download > .view-github:active {
+    background-color: #404040;
+}
+
+#item-view > .download.no-github {
+    grid-template-columns: auto;
+}
+#item-view > .download.no-github > .view-github {
+    display: none;
+}
+
+
+/* ughausdhasiod mobile stuff :D */
+
+@media only screen and (max-width: 1024px) {
+    .content {
+        min-width: 0px;
+        width: 100%;
+        background-color: blue;
+        position: unset;
+        transform: none;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #item-view > .text-html {
+        width: 100%;
+        justify-self: unset;
+    }
+    #item-view > .title {
+        margin-left: 0px;
+        justify-self: center;
+    }
+}
