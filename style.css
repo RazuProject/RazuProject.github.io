@@ -103,6 +103,12 @@ body {
 .nav > .right > .socials > a > span.discord {
     background-image: url("assets/discord.svg");
 }
+.nav > .right > .socials > a > span.youtube {
+    background-image: url("assets/youtube.svg");
+}
+.nav > .right > .socials > a > span.reddit {
+    background-image: url("assets/reddit.svg");
+}
 
 #page {
     width: 100%;
@@ -174,7 +180,13 @@ body {
         justify-self: center;
         height: 32px;
         width: 32px;
-        background-color: red;
+        margin: 8px;
+        background-image: url("assets/burger-menu.svg");
+        background-size: auto;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
         cursor: pointer;
     }
 }
