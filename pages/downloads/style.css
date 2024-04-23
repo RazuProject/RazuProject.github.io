@@ -3,6 +3,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 #downloads,
@@ -263,19 +264,10 @@ body {
 
 /* ughausdhasiod mobile stuff :D */
 
-@media only screen and (max-width: 1024px) {
-    .content {
-        min-width: 0px;
-        width: 100%;
-        background-color: blue;
-        position: unset;
-        transform: none;
-    }
-}
 @media only screen and (max-width: 800px) {
     #item-view > .text-html {
-        width: 100%;
         justify-self: unset;
+        width: unset;
     }
     #item-view > .title {
         margin-left: 0px;

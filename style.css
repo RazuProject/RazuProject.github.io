@@ -93,6 +93,10 @@ body {
     background-position-y: center;
 }
 
+.nav > .mobile-burger {
+    display: none;
+}
+
 .nav > .right > .socials > a > span.github {
     background-image: url("assets/github.svg");
 }
@@ -122,5 +126,55 @@ body {
         width: 100%;
         position: unset;
         transform: none;
+    }
+    
+    .nav {
+        grid-template-columns: 64px auto 64px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .nav > .logo {
+        grid-column: 2;
+        justify-self: center;
+    }
+    .nav > .right {
+        grid-column: 3;
+
+        flex-direction: column;
+        justify-content: flex-start;
+
+        position: fixed;
+        top: 64px;
+        left: 0px;
+
+        width: 100%;
+        height: auto;
+        padding-top: 8px;
+        padding-bottom: 16px;
+
+        z-index: 20;
+        overflow: hidden;
+        
+        background-color: #404040;
+    }
+    .nav > .right > .pages {
+        flex-direction: column;
+    }
+    .nav > .right > .pages > span {
+        text-align: center;
+    }
+
+    .nav > .right.not-toggled {
+        display: none;
+    }
+    
+    .nav > .mobile-burger {
+        display: block;
+        align-self: center;
+        justify-self: center;
+        height: 32px;
+        width: 32px;
+        background-color: red;
+        cursor: pointer;
     }
 }

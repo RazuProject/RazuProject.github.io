@@ -1,7 +1,18 @@
 let pageFrame = document.querySelector("iframe#page");
 let shouldBe = "/";
 
+let mobileBurger = document.querySelector(".nav > .mobile-burger");
+let right = document.querySelector(".nav > .right");
+mobileBurger.addEventListener("click", function() {
+    if (right.className == "right not-toggled") {
+        right.className = "right";
+    } else {
+        right.className = "right not-toggled";
+    };
+});
+
 function setPage(sub, file) {
+    right.className = "right not-toggled";
     let filePath = "";
     if (sub == "") {
         filePath = "pages/" + file;
