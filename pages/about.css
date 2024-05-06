@@ -1,0 +1,51 @@
+#about {
+    padding: 8px;
+}
+#people {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+    grid-template-rows: auto;
+    gap: 8px;
+    justify-items: center;
+}
+.profile {
+    color: white;
+    display: flex;
+    padding: 8px;
+    background-color: #303030;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: calc(100% - 16px);
+}
+.profile > .profile-picture {
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.profile > .name {
+    font-size: 24px;
+}
+.profile > .role {
+    color: #ccc;
+}
+.profile > .accented-divider {
+    width: 100%;
+    height: 2px;
+}
+.profile > .bio-html {
+    width: 100%;
+}
+.profile > .links > a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.profile > .links > a::after {
+    content: "  •  ";
+    color: white;
+}
+.profile > .links > a:nth-last-child(1)::after {
+    display: none;
+}

@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Jaegerwald",
+        "profile_picture": "../files/images/profile-pictures/jaegerwald.png",
+        "role": "Software Dev - UI/UX Designer",
+        "accent_color": "#257047",
+        "bio_html": "I've been passionate about Anki and their products since I was a little kid. I'm self taught, and I enjoy doing the things I do as a hobby.<br><br>If you have any questions regarding these topics don't be afraid to reach out to me! (¬‿¬)",
+
+        "has_socials": true,
+        "socials": [
+            ["Github", "https://github.com/JaegerwaldDev"],
+            ["Reddit", "https://reddit.com/u/Jaegerwald"]
+        ]
+    },
+    {
+        "name": "Elliolectric",
+        "profile_picture": "../files/images/profile-pictures/elliolectric.webp",
+        "role": "Hardware Tester/Designer - Software Dev",
+        "accent_color": "#324f6b",
+        "bio_html": "<i>No bio has been added yet.</i>",
+
+        "has_socials": false
+    },
+    {
+        "name": "Zoid",
+        "profile_picture": "../files/images/profile-pictures/zoid.jpg",
+        "role": "Software Developer",
+        "accent_color": "#ffffff",
+        "bio_html": "<i>No bio has been added yet.</i>",
+
+        "has_socials": false
+    },
+    {
+        "name": "cozmo14047",
+        "profile_picture": "downloads/saul2.png",
+        "role": "PCB/Software Developer",
+        "accent_color": "#40ddff",
+        "bio_html": "<i>No bio has been added yet.</i>",
+
+        "has_socials": false
+    },
+    {
+        "name": "Chri-Deefer",
+        "profile_picture": "../files/images/profile-pictures/chri-deefer.webp",
+        "role": "UI Designer",
+        "accent_color": "#8b887e",
+        "bio_html": "<i>No bio has been added yet.</i>",
+
+        "has_socials": false
+    }
+]

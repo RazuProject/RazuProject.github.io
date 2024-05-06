@@ -28,7 +28,7 @@ body {
     padding-right: 4px;
     display: grid;
 
-    grid-template-columns: repeat(auto-fill, minmax(232px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
     grid-template-rows: repeat(auto-fill, 256px);
 
     gap: 8px;
