@@ -48,9 +48,9 @@ body {
 }
 .nav > .logo {
     display: inline-block;
-    height: 48px;
+    height: 32px;
     width: 96px;
-    background-image: url("./assets/logo.png");
+    background-image: url("./assets/logo.svg");
     background-size: 96px;
     cursor: pointer;
 }
