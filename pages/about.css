@@ -1,6 +1,22 @@
 #about {
     padding: 8px;
 }
+#about > .title {
+    display: block;
+    font-size: 32px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+#about > .goal {
+    display: block;
+    text-align: center;
+    width: calc(100% - 128px);
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
 #people {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
@@ -47,5 +63,6 @@
     color: white;
 }
 .profile > .links > a:nth-last-child(1)::after {
+    
     display: none;
 }
