@@ -1,0 +1,72 @@
+
+html {
+    background-color: #202020;
+    font-family: sans-serif;
+}
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    display: grid;
+    grid-template-rows: 32px auto;
+    grid-template-columns: 256px auto;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+}
+.title-bar {
+    display: flex;
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #303030;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+    flex-direction: row;
+}
+.title-bar > span.text {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.title-bar > .subtitle {
+    color: #ccc;
+}
+.title-bar > button {
+    height: 32px;
+    width: 32px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: -4px;
+    margin-top: -4px;
+    border: none;
+    outline: none;
+    transition-duration: 0.1s;
+    background: none;
+}
+.title-bar > button:hover {
+    background-color: #404040;
+}
+img {
+    user-select: none;
+}
+span.seperator {
+    display: block;
+    margin-bottom: -4px;
+    margin-top: -4px;
+    height: 32px;
+    width: 1px;
+    background-color: #202020;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+#tree {
+    background-color: #252525;
+}

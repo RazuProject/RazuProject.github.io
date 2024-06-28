@@ -1,0 +1,135 @@
+html {
+    background-color: black;
+}
+
+#project {
+    width: 100%;
+    height: 256px;
+    display: grid;
+    grid-template-rows: 192px 64px;
+    grid-template-columns: 1fr 2fr;
+
+    justify-items: center;
+}
+
+#project > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    object-fit: cover;
+}
+#project > button {
+    display: block;
+    user-select: none;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+}
+#project > button:hover {
+    cursor: pointer;
+}
+#project > span {
+    display: block;;
+    height: fit-content;
+    user-select: none;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    color: white;
+    align-self: center;
+    margin: 16px;
+    opacity: 0.8;
+}
+
+
+
+
+#project.right {
+    grid-template-columns: 2fr 1fr;
+}
+#project.right > button {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#project.right > span {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        background-color: #111;
+    }
+
+    #project,
+    #project.right {
+        width: 100%;
+        height: 512px;
+        display: grid;
+        grid-template-rows: auto 64px;
+        grid-template-columns: auto;
+    
+        justify-items: center;
+    }
+    
+    #project > img,
+    #project.right > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #project > button,
+    #project.right > button {
+        display: block;
+        user-select: none;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: #00000080;
+    }
+    #project > span,
+    #project.right > span {
+        display: block;
+        height: fit-content;
+        user-select: none;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    
+        color: white;
+        align-self: flex-end;
+        margin: 32px;
+    }
+}

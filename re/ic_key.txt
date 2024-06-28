@@ -1,0 +1,39 @@
+Icon Reference key
+
+Icon keys consists of 4 chars, two char each.
+No icon = "--"
+
+First half icons:       Ascii art representation (not accurate!)
+
+Dc - Dictionary:        {}
+Hx - Hex:               0x
+Cb - Compare Braces:    <>
+Ls - List:              ==
+Sl - Square Icon List   :=
+Xm = XML                XML
+Zp = Zip                ZIP
+An = Animation          >||
+Sc = Script             /=/
+
+Second half icon:
+(Meant for reverse engineering progress status)
+
+Nt = Nothing            (/)  Red Color
+Cf = Really Confusing   ??   Orange
+Yw = Yellow Warning     /!\  Yellow
+Rw = Red Warning        /!\  Red
+Gc = Gray check         v/   Gray
+
+now some examples
+
+say you have some obscure script:
+ScCf ->           /=/  itemname ??
+
+a file thats simply a zip in disguise:
+
+ZpGc ->           ZIP  itemname  v/
+
+
+if you want nothing simply put
+
+---- ->           itemname

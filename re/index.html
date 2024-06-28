@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./tree.css">
+</head>
+<body>
+    <div class="title-bar">
+        <img src="./logo.svg" height="24px" draggable="false">
+        <span class="subtitle text">Reverse Engineering</span>
+        <button id="discord"><img src="./icon/discord.svg" height="16px" draggable="false"></button>
+        <button id="navigator"><img src="./icon/navigator.svg" height="16px" draggable="false"></button>
+        <button id="help"><img src="./icon/help.svg" height="16px" draggable="false"></button>
+        <span class="seperator"></span>
+        <span class="text">Pre-Release 0.0</span>
+        <span class="seperator"></span>
+    </div>
+    <div id="tree">
+        <span class="i">Information</span>
+        <span class="d"></span>
+        <div class="f">
+            <span class="f">OBB</span>
+            <div>
+                <span class="i">About this File</span>
+                <span class="d"></span>
+                <div class="f">
+                    <span class="f">assets</span>
+                    <div>
+                        <span class="i">AssetBundles/</span>
+                        <span class="i">bin/Data/</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./tree.js"></script>
+</body>
+</html>
