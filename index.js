@@ -14,6 +14,9 @@ mobileBurger.addEventListener("click", function() {
 function setPage(sub, file) {
     right.className = "right not-toggled";
     let filePath = "";
+    if (file == "../re/" || file == "../re") {
+        console.warn("lmao")
+    };
     if (sub == "") {
         filePath = "pages/" + file;
     } else {

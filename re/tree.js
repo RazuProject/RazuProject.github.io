@@ -31,10 +31,12 @@ async function getJson(url) {
     return result;
 };
 
-function createItem(name, document) {
+function createItem(name, file) {
     let item = document.createElement("span");
     item.className = "i";
     item.textContent = name;
+
+    return item;
 };
 
 function createFolder(name, contents) {
@@ -54,15 +56,20 @@ function createFolder(name, contents) {
 
 function createFolderItems(tree) {
     let items = [];
-    for (let i=0;i++;i<tree.length) {
-        if (tree[i] = "---") {
-            items.append(document.createElement("span").className = "d");
-        };
-        switch (tree[i][0]) {
-            case "i":
-                items.append(createItem(tree[i][2], tree[i][1]));
-            case "f":
-                items.append(createFolder(tree[i][1], tree[i][2]));
+    for (let i=0;i<tree.length;i++) {
+        if (tree[i] == "---") {
+            let divider = document.createElement("span");
+            divider.className = "d";
+            items.push(divider);
+        } else {
+            switch (tree[i][0]) {
+                case "i":
+                    let item = createItem(tree[i][2], tree[i][1])
+                    items.push(item);
+                case "f":
+                    let folder = createFolder(tree[i][1], tree[i][2])
+                    items.push(folder);
+            };
         };
     };
     return items;
