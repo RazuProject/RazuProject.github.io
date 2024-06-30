@@ -1,5 +1,5 @@
 html {
-    background-color: #eeeeee;
+    background-color: #202020;
     
     height: 100%;
     width: 100%;
@@ -47,12 +47,29 @@ body {
     user-select: none;
 }
 .nav > .logo {
+    z-index: 20;
     display: inline-block;
     height: 32px;
     width: 96px;
     background-image: url("./assets/logo.svg");
     background-size: 96px;
     cursor: pointer;
+}
+.nav > .logo::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: inherit;
+    width: inherit;
+    display: block;
+    background-image: url("./assets/logo.svg");
+    filter: blur(0px);
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+.nav > .logo:hover::after {
+    filter: blur(8px);
+    opacity: 0.5;
 }
 .nav > .right {
     display: flex;
@@ -116,6 +133,7 @@ body {
     padding: 0px;
     margin: 0px;
     border: none;
+    background-color: #252525;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -161,7 +179,7 @@ body {
         z-index: 20;
         overflow: hidden;
         
-        background-color: #404040;
+        background-color: #303030;
     }
     .nav > .right > .pages {
         flex-direction: column;
