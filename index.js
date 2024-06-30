@@ -15,7 +15,7 @@ function setPage(sub, file) {
     right.className = "right not-toggled";
     let filePath = "";
     if (file == "../re/" || file == "../re") {
-        console.warn("lmao")
+        console.error("lmao")
     };
     if (sub == "") {
         filePath = "pages/" + file;
