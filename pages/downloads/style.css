@@ -39,7 +39,7 @@ body {
     display: grid;
     grid-template-rows: 128px 32px 64px 32px;
     height: 256px;
-    background-color: #808080;
+    background-color: #dddddd;
 }
 .items > .item > .cover {
     height: 160px;
@@ -109,7 +109,7 @@ body {
 }
 #item-view > .location > #close:hover {
     cursor: pointer;
-    background-color: #404040;
+    background-color: #ccc;
 }
 #item-view > .location > #close::after {
     content: "\2715";
@@ -127,7 +127,7 @@ body {
     overflow: hidden;
     display: flex;
     user-select: none;
-    background-color: #808080;
+    background-color: #bbb;
 }
 #item-view > #images > img {
     min-width: 100%;
@@ -169,7 +169,6 @@ body {
     transform: translateY(23px);
     position: absolute;
     background: white;
-    border-radius: 1px;
 }
 #item-view > #images > #image-control > span.selected::after {
     background: #303030;
@@ -190,13 +189,13 @@ body {
     cursor: pointer;
 }
 
-/* Actual page content beningings here :3 */
+/*                        v  misspelled the word without this letter so i braced it cause i thought i'd be funny */
+/* Actual page content be(g)ings here :3 */
 
 #item-view > .title {
     font-size: 32px;
     margin-top: 8px;
-    margin-left: 96px;
-    font-weight: bold;
+    margin-left: 32px;
 }
 #item-view > .text-html {
     width: 768px;
