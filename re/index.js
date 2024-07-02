@@ -1,3 +1,13 @@
+// titlebar nav stuff
+document.querySelector(".title-bar > #discord").addEventListener("click", function() {
+    window.open("https://discord.gg/mkbx4B4de2", "_blank").focus();
+});
+document.querySelector(".title-bar > #navigator").addEventListener("click", function() {
+    window.location = "nav";
+});
+
+// ---
+
 let queryString = window.location.search;
 let urlParameters = new URLSearchParams(queryString);
 

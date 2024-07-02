@@ -53,7 +53,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nulla provident
 
 ---
 
-syntax highlighting fully functional soon&trade;
+syntax highlighting fully&trade; functional
 ```python
 import random
 
