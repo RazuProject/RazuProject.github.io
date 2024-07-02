@@ -1,26 +1,26 @@
 {
-    "default": "info",
+    "default": "info.md",
     "tree": [
-        ["i","info","Information"],
+        ["i","info.md","Information"],
         "---",
         ["f","OBB",[
-            ["i","obb_about","About this File"],
+            ["i","obb_about.md","About this File"],
             "---",
             ["f","assets",[
-                ["i","obb_asset_bundles","AssetBundles/"],
-                ["i","obb_bin_data","bin/Data/"],
+                ["i","obb_asset_bundles.md","AssetBundles/"],
+                ["i","obb_bin_data.md","bin/Data/"],
                 ["f","cozmo_resources/",[
-                    ["i", "placeholder", "Dummy Item"]
+                    ["i", "placeholder.md", "Dummy Item"]
                 ]],
-                ["i","obb_localized_strings","LocalizedStrings/"],
-                ["i","obb_scratch","Scratch/"],
-                ["i","obb_videos","Videos/"],
-                ["i","obb_das_config","DASConfig.json"],
-                ["i","obb_resources","resources.txt"]
+                ["i","obb_localized_strings.md","LocalizedStrings/"],
+                ["i","obb_scratch.md","Scratch/"],
+                ["i","obb_videos.md","Videos/"],
+                ["i","obb_das_config.md","DASConfig.json"],
+                ["i","obb_resources.md","resources.txt"]
             ]]
         ]],
         ["f","APK",[
-            ["i", "placeholder", "Dummy Item"]
+            ["i", "placeholder.md", "Dummy Item"]
         ]]
     ]
 }

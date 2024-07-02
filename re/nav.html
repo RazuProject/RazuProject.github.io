@@ -74,7 +74,7 @@
             margin-right: 4px;
         }
 
-        .content {
+        #content {
             display: flex;
             border-radius: 8px;
             padding: 1px;
@@ -84,7 +84,7 @@
             align-self: center;
             margin-top: 48px;
         }
-        .content > button {
+        #content > button {
             border: none;
             outline: none;
             background: none;
@@ -95,14 +95,14 @@
             transition-duration: 0.1s;
             cursor: pointer;
         }
-        .content > button:hover {
+        #content > button:hover {
             background-color: #404040;
         }
-        .content > button:nth-child(1) {
+        #content > button:nth-child(1) {
             border-top-left-radius: 7px;
             border-bottom-left-radius: 7px;
         }
-        .content > button:nth-last-child(1) {
+        #content > button:nth-last-child(1) {
             border-top-right-radius: 7px;
             border-bottom-right-radius: 7px;
         }
@@ -116,10 +116,35 @@
         <span class="text">Navigator</span>
         <span class="seperator"></span>
     </div>
-    <div class="content">
-        <button>App</button>
-        <button>Robot</button>
-        <button>Other</button>
+    <div id="content">
     </div>
+    <script>
+        async function getJson(url) {
+            let result = {};
+            await fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                result = data;
+            });
+            return result;
+        };
+
+        async function main() {
+            let content = document.getElementById("content");
+            const directories = await getJson("directories.json");
+            console.log(directories);
+
+            for (let i=0;i<directories.length;i++) {
+                let directoryButton = document.createElement("button");
+                directoryButton.textContent = directories[i].display;
+                directoryButton.addEventListener("click", function() {
+                    window.location = `index.html?dir=${directories[i].dir_id}`
+                });
+                content.appendChild(directoryButton);
+            };
+        };
+
+        main();
+    </script>
 </body>
 </html>

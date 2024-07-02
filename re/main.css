@@ -2,6 +2,7 @@
 html {
     background-color: #202020;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 html, body {
     padding: 0px;
@@ -29,6 +30,11 @@ body {
     color: white;
     flex-direction: row;
     user-select: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 20;
 }
 .title-bar > span.text {
     display: block;
@@ -70,4 +76,18 @@ span.seperator {
 }
 #tree {
     background-color: #252525;
+    grid-row: 2;
+    grid-column: 1;
+    position: fixed;
+    top: 32px;
+    left: 0px;
+    width: 248px;
+    height: calc(100vh - 32px);
+}
+#content {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 32px;
+    padding-left: 48px;
+    padding-right: 48px;
 }

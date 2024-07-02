@@ -1,25 +1,14 @@
-// {
-//     "default": "info",
-//     "tree": [
-//         ["i","info","Information"],
-//         "---",
-//         ["f","OBB",[
-//             ["i","obb_about","About this File"],
-//             "---File Contents",
-//             ["f","assets",[
-//                 ["i","obb_asset_bundles","AssetBundles/"],
-//                 ["i","obb_bin_data","bin/Data/"],
-//                 ["f","cozmo_resources/",[]],
-//                 ["i","obb_localized_strings","LocalizedStrings/"],
-//                 ["i","obb_scratch","Scratch/"],
-//                 ["i","obb_videos","Videos/"],
-//                 ["i","obb_das_config","DASConfig.json"],
-//                 ["i","obb_resources","resources.txt"]
-//             ]]
-//         ]],
-//         ["f","APK",[]]
-//     ]
-// }
+let queryString = window.location.search;
+let urlParameters = new URLSearchParams(queryString);
+
+let directory = {};
+const content = document.getElementById("content");
+
+async function setMarkdownPage(file) {
+    content.innerHTML = await getMarkdown(directory.folder_path + file);
+    window.history.pushState({}, "", "?dir=" + directory.dir_id + "&file=" + file);
+    window.Prism.highlightAll();
+};
 
 async function getJson(url) {
     let result = {};
@@ -31,10 +20,23 @@ async function getJson(url) {
     return result;
 };
 
+async function getMarkdown(url) {
+    let result = "";
+    await fetch(url)
+    .then(response => response.text())
+    .then(data => {
+        result = marked.parse(data);
+    });
+    return result;
+};
+
 function createItem(name, file) {
     let item = document.createElement("span");
     item.className = "i";
     item.textContent = name;
+    item.addEventListener("click", async function() {
+        setMarkdownPage(file);
+    });
 
     return item;
 };
@@ -93,10 +95,7 @@ function createFolderItems(tree) {
 };
 
 async function main() {
-    const queryString = window.location.search;
-    const urlParameters = new URLSearchParams(queryString);
     const directories = await getJson("directories.json");
-    let directory = {};
 
     if (!urlParameters.has("dir")) {
         window.location = "nav";
@@ -106,6 +105,7 @@ async function main() {
         if (i == directories.length) {
             console.warn(`Unmatched "${urlParameters.get("dir")}"`)
             window.location = "nav";
+            break;
         } else if (urlParameters.get("dir") == directories[i].dir_id) {
             console.log("Matched with", directories[i]);
             directory = directories[i];
@@ -115,6 +115,20 @@ async function main() {
 
     const directoryTree = await getJson(directory.folder_path + "tree.json")
     console.log("Got tree", directoryTree)
+    
+    if (urlParameters.has("file")) {
+        setMarkdownPage(urlParameters.get("file"))
+    } else {
+        setMarkdownPage(directoryTree.default)
+    };
+
+    window.addEventListener("popstate", async function() {
+        let queryString = window.location.search;
+        let urlParameters = new URLSearchParams(queryString);
+        if (urlParameters.has("file")) {
+            setMarkdownPage(urlParameters.get("file"))
+        };
+    });
 
     treeItems = createFolderItems(directoryTree.tree);
     for (let i=0;i<treeItems.length;i++) {

@@ -1,0 +1,62 @@
+a {
+    color: #ff7f7f;
+}
+
+#content {
+    color: #ddd;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+pre:has(code) {
+    background-color: #101010;
+    border-radius: 8px;
+    padding: 8px;
+}
+p > code {
+    background-color: #101010;
+    padding: 2px;
+    border-radius: 2px;
+}
+blockquote {
+    border-width: 1px;
+    border-left-width: 5px;
+    border-style: solid;
+    border-color: #404040;
+    border-radius: 5px;
+
+    margin: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 16px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #303030;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #303030;
+}
+
+table {
+    background-color: #404040;
+    padding: 0px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+tr, th, td {
+    background-color: #202020;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+th {
+    background-color: #303030;
+}
