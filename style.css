@@ -17,20 +17,61 @@ body {
 }
 
 .content {
-    min-width: 1024px;
     background-color: white;
-    justify-self: center;
     height: 100%;
 
     display: grid;
 
-    grid-template-rows: 64px auto;
+    grid-template-rows: 64px 64px auto;
     grid-template-columns: auto;
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
+
+#event-banner-controller {
+    height: 32px;
+    width: 32px;
+    background-color: red;
+    position: fixed;
+    top: 14px;
+    right: 16px;
+}
+#event-banner-controller::after {
+    content: "\203a";
+    color: black;
+    display: block;
+    position: fixed;
+    height: 32px;
+    width: 32px;
+    top: 14px;
+    right: 16px;
+}
+.event-banner {
+    display: grid;
+    padding-left: 48px;
+    padding-right: 48px;
+    justify-items: center;
+    align-items: center;
+
+    color: #ccc;
+
+    background: linear-gradient(90deg, #303030, firebrick);
+}
+.event-banner > p {
+    width: fit-content;
+    display: block;
+}
+.event-banner:has(#event-banner-controller:checked) {
+    position: fixed;
+    top: -256px;
+    color: transparent;
+    background: none;
+}
+.content:has(.event-banner > #event-banner-controller:checked) {
+    grid-template-rows: 64px auto;
+}
+#event-banner-controller:checked {
+    display: none;
+}
+
 .nav {
     background-color: #303030;
     
@@ -45,6 +86,7 @@ body {
     grid-template-columns: 96px auto;
 
     user-select: none;
+    gap: 16px;
 }
 .nav > .logo {
     z-index: 20;
@@ -71,35 +113,36 @@ body {
     filter: blur(8px);
     opacity: 0.5;
 }
-.nav > .right {
-    display: flex;
-    justify-content: flex-end;
+.nav > .options {
+    display: grid;
     align-items: center;
-    width: auto;
     height: 64px;
     gap: 32px;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
 }
-.nav > .right > .pages {
+.nav > .options > .pages {
     display: flex;
     gap: 16px;
 }
-.nav > .right > .pages > span {
+.nav > .options > .pages > span {
     font-weight: bold;
     letter-spacing: 1px;
 }
-.nav > .right > .pages > span:hover {
+.nav > .options > .pages > span:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
-.nav > .right > .socials {
+.nav > .options > .socials {
     display: flex;
     gap: 8px;
+    justify-self: flex-end;
 }
-.nav > .right > .socials > a {
+.nav > .options > .socials > a {
     text-decoration: none;
 }
-.nav > .right > .socials > a > span {
+.nav > .options > .socials > a > span {
     display: inline-block;
     height: 32px;
     width: 32px;
@@ -114,16 +157,16 @@ body {
     display: none;
 }
 
-.nav > .right > .socials > a > span.github {
+.nav > .options > .socials > a > span.github {
     background-image: url("assets/github.svg");
 }
-.nav > .right > .socials > a > span.discord {
+.nav > .options > .socials > a > span.discord {
     background-image: url("assets/discord.svg");
 }
-.nav > .right > .socials > a > span.youtube {
+.nav > .options > .socials > a > span.youtube {
     background-image: url("assets/youtube.svg");
 }
-.nav > .right > .socials > a > span.reddit {
+.nav > .options > .socials > a > span.reddit {
     background-image: url("assets/reddit.svg");
 }
 
@@ -161,14 +204,15 @@ body {
         grid-column: 2;
         justify-self: center;
     }
-    .nav > .right {
+    .nav > .options {
         grid-column: 3;
 
         flex-direction: column;
         justify-content: flex-start;
 
+        display: flex;
         position: fixed;
-        top: 64px;
+        top: 128px;
         left: 0px;
 
         width: 100%;
@@ -181,14 +225,14 @@ body {
         
         background-color: #303030;
     }
-    .nav > .right > .pages {
+    .nav > .options > .pages {
         flex-direction: column;
     }
-    .nav > .right > .pages > span {
+    .nav > .options > .pages > span {
         text-align: center;
     }
 
-    .nav > .right.not-toggled {
+    .nav > .options.not-toggled {
         display: none;
     }
     

@@ -2,17 +2,17 @@ let pageFrame = document.querySelector("iframe#page");
 let shouldBe = "/";
 
 let mobileBurger = document.querySelector(".nav > .mobile-burger");
-let right = document.querySelector(".nav > .right");
+let right = document.querySelector(".nav > .options");
 mobileBurger.addEventListener("click", function() {
-    if (right.className == "right not-toggled") {
-        right.className = "right";
+    if (right.className == "options not-toggled") {
+        right.className = "options";
     } else {
-        right.className = "right not-toggled";
+        right.className = "options not-toggled";
     };
 });
 
 function setPage(sub, file) {
-    right.className = "right not-toggled";
+    right.className = "options not-toggled";
     let filePath = "";
     if (file == "../re/" || file == "../re") {
         console.error("lmao")

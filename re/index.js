@@ -46,6 +46,13 @@ function createFolder(name, contents) {
     let folderName = document.createElement("span");
     folderName.className = "f";
     folderName.textContent = name;
+    folderName.addEventListener("click", function() {
+        if (folder.className == "f") {
+            folder.className = "f closed";
+        } else {
+            folder.className = "f";
+        };
+    });
     folder.appendChild(folderName);
 
     let folderContent = document.createElement("div");
@@ -57,7 +64,7 @@ function createFolder(name, contents) {
 
     folder.appendChild(folderContent);
 
-    console.warn("zoid was here, i eated your code"); // you sneaky bastard
+    // console.warn("zoid was here, i eated your code"); // you sneaky bastard
 
     return folder;
 };
@@ -85,42 +92,34 @@ function createFolderItems(tree) {
     return items;
 };
 
-let tree = document.getElementById("tree");
-let items = [
-    ["i","info","Information"],
-    "---",
-    ["f","OBB",[
-        ["i","obb_about","About this File"],
-        "---File Contents",
-        ["f","assets",[
-            ["i","obb_asset_bundles","AssetBundles/"],
-            ["i","obb_bin_data","bin/Data/"],
-            ["f","cozmo_resources/",[]],
-            ["i","obb_localized_strings","LocalizedStrings/"],
-            ["i","obb_scratch","Scratch/"],
-            ["i","obb_videos","Videos/"],
-            ["i","obb_das_config","DASConfig.json"],
-            ["i","obb_resources","resources.txt"]
-        ]]
-    ]],
-    ["f","APK",[]]
-];
-treeItems = createFolderItems(items);
-for (let i=0;i<treeItems.length;i++) {
-    tree.appendChild(treeItems[i]);
-};
-
-async function main() {const queryString = window.location.search;
+async function main() {
+    const queryString = window.location.search;
     const urlParameters = new URLSearchParams(queryString);
-    
-    if (urlParameters.has("dir")) {
-        console.log("you know where you are");
-    } else {
+    const directories = await getJson("directories.json");
+    let directory = {};
+
+    if (!urlParameters.has("dir")) {
         window.location = "nav";
     };
 
-    const directories = getJson("directories.json");
-    console.log("fortnite");
+    for (let i=0;i<directories.length+1;i++) {
+        if (i == directories.length) {
+            console.warn(`Unmatched "${urlParameters.get("dir")}"`)
+            window.location = "nav";
+        } else if (urlParameters.get("dir") == directories[i].dir_id) {
+            console.log("Matched with", directories[i]);
+            directory = directories[i];
+            break;
+        }
+    };
+
+    const directoryTree = await getJson(directory.folder_path + "tree.json")
+    console.log("Got tree", directoryTree)
+
+    treeItems = createFolderItems(directoryTree.tree);
+    for (let i=0;i<treeItems.length;i++) {
+        tree.appendChild(treeItems[i]);
+    };
 };
 
 main();

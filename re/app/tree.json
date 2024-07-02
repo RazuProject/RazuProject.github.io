@@ -5,11 +5,13 @@
         "---",
         ["f","OBB",[
             ["i","obb_about","About this File"],
-            "---File Contents",
+            "---",
             ["f","assets",[
                 ["i","obb_asset_bundles","AssetBundles/"],
                 ["i","obb_bin_data","bin/Data/"],
-                ["f","cozmo_resources/",[]],
+                ["f","cozmo_resources/",[
+                    ["i", "placeholder", "Dummy Item"]
+                ]],
                 ["i","obb_localized_strings","LocalizedStrings/"],
                 ["i","obb_scratch","Scratch/"],
                 ["i","obb_videos","Videos/"],
@@ -17,6 +19,8 @@
                 ["i","obb_resources","resources.txt"]
             ]]
         ]],
-        ["f","APK",[]]
+        ["f","APK",[
+            ["i", "placeholder", "Dummy Item"]
+        ]]
     ]
 }

@@ -28,6 +28,7 @@ body {
     padding-right: 8px;
     color: white;
     flex-direction: row;
+    user-select: none;
 }
 .title-bar > span.text {
     display: block;

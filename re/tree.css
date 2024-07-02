@@ -16,6 +16,7 @@ jaegerwaldev.github.io */
     cursor: pointer;
     height: 16px;
 }
+
 div.f {
     display: grid;
     padding-right: 0px;
@@ -40,12 +41,17 @@ span.f {
 }
 span.f:hover {
     background-color: #303030;
+    border-radius: 4px;
 }
 span.f::before {
     content: "";
-    width: 16px;
-    height: 16px;
-    background-color: red;
+    width: 12px;
+    height: 12px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #404040;
+    background-color: #404040;
     display: inline-block;
     position: absolute;
     transform: translateX(-20px);
@@ -55,8 +61,20 @@ div.f > div {
     grid-column: 2;
 }
 
+div.f.closed {
+    grid-template-rows: 24px;
+}
+div.f.closed > span.f::before {
+    border-color: #101010;
+    background-color: transparent;
+}
+div.f.closed > div {
+    display: none;
+}
+
 .i:hover {
     background-color: #303030;
+    border-radius: 4px;
 }
 .d {
     display: block;
