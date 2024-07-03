@@ -5,12 +5,12 @@
         "display": "App"
     },
     {
-        "folder_path": "app/",
+        "folder_path": "robot/",
         "dir_id": "robot",
         "display": "Robot"
     },
     {
-        "folder_path": "app/",
+        "folder_path": "etc/",
         "dir_id": "etc",
         "display": "Other"
     }
