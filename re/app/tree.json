@@ -7,20 +7,23 @@
             ["i","obb_about.md","About this File"],
             "---",
             ["f","assets",[
-                ["i","obb_asset_bundles.md","AssetBundles/"],
-                ["i","obb_bin_data.md","bin/Data/"],
-                ["f","cozmo_resources/",[
-                    ["i", "placeholder.md", "Dummy Item"]
+                ["i","obb_asset_bundles.md","Asset Bundles"],
+                ["i","obb_bin_data.md","Bin Data"],
+                ["f","Cozmo Resources",[
+                    ["i","placeholder.md","Dummy Item"]
                 ]],
-                ["i","obb_localized_strings.md","LocalizedStrings/"],
-                ["i","obb_scratch.md","Scratch/"],
-                ["i","obb_videos.md","Videos/"],
-                ["i","obb_das_config.md","DASConfig.json"],
+                ["i","obb_localized_strings.md","Localized Strings"],
+                ["f","Scratch",[
+                    ["i","obb_scr_about.md","About"],
+                    ["i","obb_scr_test_projects.md","Test Projects"]
+                ]],
+                ["i","obb_videos.md","Videos"],
+                ["i","obb_das_config.md","DAS Config"],
                 ["i","obb_resources.md","resources.txt"]
             ]]
         ]],
         ["f","APK",[
-            ["i", "placeholder.md", "Dummy Item"]
+            ["i","placeholder.md","Dummy Item"]
         ]]
     ]
 }
