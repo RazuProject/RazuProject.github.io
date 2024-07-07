@@ -22,11 +22,11 @@ body {
 
     display: grid;
 
-    grid-template-rows: 64px 64px auto;
+    grid-template-rows: 64px auto;
     grid-template-columns: auto;
 }
 
-#event-banner-controller {
+/* #event-banner-controller {
     height: 32px;
     width: 32px;
     background-color: red;
@@ -70,7 +70,7 @@ body {
 }
 #event-banner-controller:checked {
     display: none;
-}
+} */
 
 .nav {
     background-color: #303030;
