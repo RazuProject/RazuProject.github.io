@@ -2,14 +2,16 @@
     {
         "name": "Jaegerwald",
         "profile_picture": "../files/images/profile-pictures/jaegerwald.png",
-        "role": "Software Dev - UI/UX Designer",
+        "role": "Software, UI/UX, & Web Developer",
         "accent_color": "#257047",
-        "bio_html": "I've been passionate about Anki and their products since I was a little kid. I'm self taught, and I enjoy doing the things I do as a hobby.<br><br>If you have any questions regarding these topics don't be afraid to reach out to me! (¬‿¬)",
+        "bio_html": "I've been passionate about Anki and their products ever since I was a little kid. I'm self taught, and I enjoy doing the things I do as a hobby. If you've got something you want to ask us, I'll always be available for contact!",
 
         "has_socials": true,
         "socials": [
             ["Github", "https://github.com/JaegerwaldDev"],
-            ["Reddit", "https://reddit.com/u/Jaegerwald"]
+            ["Reddit", "https://reddit.com/u/Jaegerwald"],
+            ["Discord", "https://discord.com/users/711944262173982822"],
+            ["Email", "mailto:jaegerwald.dev@gmail.com"]
         ]
     },
     {

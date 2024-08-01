@@ -16,14 +16,13 @@ function createProfile(data) {
     let container = document.createElement("div");
     container.className = "profile";
     container.innerHTML = `<img draggable="false" src=${data.profile_picture} class="profile-picture"></img>
-    <span class="name">${data.name}</span>
-    <span class="role">${data.role}</span>
-    <span class="accented-divider" style="background-color:${data.accent_color}"></span>
+    <span id="person">
+        <span class="name">${data.name}</span>
+        <span class="role">${data.role}</span>
+    </span>
     <span class="bio-html">${data.bio_html}</span>`;
 
     if (data.has_socials) {
-        container.innerHTML += `<span class="accented-divider" style="background-color:${data.accent_color}"></span>`
-
         links = document.createElement("span");
         links.className = "links";
 
