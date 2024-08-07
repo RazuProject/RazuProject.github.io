@@ -40,6 +40,7 @@ body {
     background-color: #303030;
     padding: 16px;
     border-radius: 16px;
+    padding-top: 0px;
 }
 .items > .item > .cover {
     height: 160px;
@@ -83,12 +84,23 @@ body {
 
 #item-view > .location {
     height: 16px;
+    width: calc(100vw - 64px);
     font-size: 16px;
-    margin-left: 12px;
     user-select: none;
+    position: fixed;
+    top: 16px;
+    margin-top: -16px;
+    margin-right: -16px;
+    margin-left: -16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #202020;
 }
 #item-view > .location > #category {
-    opacity: 0.5;
+    color: #808080;
+    cursor: pointer;
 }
 #item-view > .location > #category::after {
     content: "\203a";
@@ -118,7 +130,7 @@ body {
 }
 
 #item-view > #images {
-    margin-top: 8px;
+    margin-top: 32px;
     margin-left: -16px;
     min-width: 100%;
     margin-right: -16px;
@@ -129,11 +141,12 @@ body {
     background-color: #808080;
 }
 #item-view > #images > img {
-    min-width: 100%;
-    width: auto;
+    width: 796px;
     background-size: auto;
     object-fit: cover;
     height: 448px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #item-view > #images > img.invisible {
     position: absolute;
@@ -174,17 +187,6 @@ body {
     background: #303030;
 }
 
-@keyframes image-control-playing {
-    from {
-        transform: translateY(15px);
-        width: 0px;
-    }
-    to {
-        transform: translateY(15px);
-        width: 48px;
-    }
-}
-
 #item-view > #images > #image-control > span:hover {
     cursor: pointer;
 }
@@ -194,13 +196,15 @@ body {
 #item-view > .title {
     font-size: 32px;
     margin-top: 8px;
-    margin-left: 96px;
     font-weight: bold;
+    width: 768px;
+    justify-self: center;
+    color: white;
 }
 #item-view > .text-html {
     width: 768px;
     justify-self: center;
-    margin-bottom: 32px;
+    margin-bottom: 64px;
     padding-bottom: 8px;
 }
 #item-view > .download {
@@ -208,8 +212,8 @@ body {
     bottom: 0px;
     background-color: #303030;
     height: 32px;
-    padding: 8px;
-    width: calc(100% - 16px);
+    padding: 16px;
+    width: calc(100% - 32px);
     margin-left: -16px;
     margin-right: -16px;
     display: grid;
@@ -223,6 +227,7 @@ body {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-radius: 8px;
 }
 #item-view > .download > .main-download:focus {
     outline: none;
@@ -242,6 +247,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
+    border-radius: 8px;
 }
 #item-view > .download > .view-github:focus {
     outline: none;
@@ -265,12 +271,24 @@ body {
 /* ughausdhasiod mobile stuff :D */
 
 @media only screen and (max-width: 800px) {
+    #item-view > #images {
+        height: 344px;
+    }
+    #item-view > #images > img {
+        min-width: 100%;
+        width: auto;
+        background-size: auto;
+        object-fit: cover;
+        height: 344px;
+        margin: 0px;
+    }
     #item-view > .text-html {
         justify-self: unset;
-        width: unset;
+        width: 100%;
     }
     #item-view > .title {
         margin-left: 0px;
         justify-self: center;
+        width: auto;
     }
 }

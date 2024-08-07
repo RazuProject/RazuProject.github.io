@@ -12,6 +12,10 @@ function setPage(folder, file) {
     window.parent.setPage(folder, file);
 };
 
+document.querySelector("#item-view > .location > #category").addEventListener("click", function() {
+    setPage("downloads", "");
+});
+
 document.getElementById("close").addEventListener("click", function() {
     setPage("downloads", "");
 });
