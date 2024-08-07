@@ -21,7 +21,7 @@ function generateSectionItem(data) {
         <img class="cover" draggable="false" src=${data.cover}></img>
         <span class="title">${data.title}</span>
         <span class="description">${data.description}</span>
-        <button class="view link-arrow">View</button>
+        <button class="view">View</button>
     `;
 
     item.querySelector(".view").addEventListener("click", function() {
