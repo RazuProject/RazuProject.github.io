@@ -64,5 +64,18 @@
         "socials": [
             ["Direct.me", "https://direct.me/chrideefer"]
         ]
+    },
+    {
+        "name": "EPU-Jelly",
+        "profile_picture": "../files/images/profile-pictures/epu.jpg",
+        "role": "Software Developer and Hardware Developer",
+        "accent_color": "#2ecc71",
+        "bio_html": "I have had Cozmo since the first year of its release, and as of recently I do CPU swaps for ANKI's other robot Vector. I love the personality, technical capibilities and quality that our favourite little robots have and am always looking for ways to improve or work on them. I am open to any questions or suggestions you might have feel free to cantact me on any of my socials :3.",
+
+        "has_socials": true,
+        "socials": [
+            ["Itch.io", "https://epujelly.itch.io/"],
+            ["Github", "https://github.com/EPUJelly"]
+        ]
     }
 ]
