@@ -21,22 +21,9 @@
         "bio_html": "After finding a broken Cozmo asking for a new home, it's been my goal to fix him up. I'm excited to learn and work together with the rest of the Razu team to make that and more a reality!<br><br>If you have any ideas or suggestions regarding Cozmo and his features, feel free to message me :3",
 
         "has_socials": true,
-         "socials": [
+        "socials": [
             ["Github", "https://github.com/Elliolectric"],
             ["Reddit", "https://reddit.com/u/Elliolectric"]
-        ]
-    },
-    {
-        "name": "Zoid",
-        "profile_picture": "../files/images/profile-pictures/zoid.jpg",
-        "role": "Software Developer",
-        "accent_color": "#ffffff",
-        "bio_html": "Ever since I got my first Cozmo in 2018, I've always wanted him to be autonomous. Since then, I've learned a few programming languages, and I'm glad that I can put them to use on this project!<br><br>If you have any questions about Cozmo, Razu, or any of my other projects, my inbox is always open (● ◡ ●)",
-        
-        "has_socials": true,
-        "socials": [
-            ["Github", "https://github.com/TheZoidMaster"],
-            ["Reddit", "https://reddit.com/user/MasterOfTheZoid"]
         ]
     },
     {
@@ -60,9 +47,7 @@
         "bio_html": "I got a Cozmo of my own back when Anki was around. He was such a good friend and learning the huge community that agrees and wants to make Cozmo better since he’s got no company behind him anymore fills my heart, so I decided to make a contribution with UI design. I’m open for questions and will definitely respond to emails!",
 
         "has_socials": true,
-        "socials": [
-            ["Direct.me", "https://direct.me/chrideefer"]
-        ]
+        "socials": [["Direct.me", "https://direct.me/chrideefer"]]
     },
     {
         "name": "EPU-Jelly",
