@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXW7GJ8ER5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-VXW7GJ8ER5');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Razu Project</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="site.webmanifest"/>
-    <meta content="The Razu Project" property="og:title">
-    <meta content="A small project for Anki's Robots! We do hardware mods and stuff." property="og:description">
-    <meta content="https://razuproject.github.io" property="og:url">
-    <meta content="https://razuproject.github.io/assets/icon.png" property="og:image">
-    <meta content="#ff7f7f" data-react-helmet="true" name="theme-color">
-    <meta name="google-site-verification" content="hahxZNj1-ZFHwkuPGOdeq43H2XCK2k8P9mKaj-6U9Lk" />
 </head>
 <body>
-    <div class="content">
-        <!--<div class="event-banner">
-            <p>Warning: This site is still being built - some pages are missing/non-funtional.
-            Work in progress stuff will have the 🛠 icon next to it.</p>
-            <input type="checkbox" id="event-banner-controller"></input>
-        </div>-->
-        <div class="nav">
-            <span class="logo" id="logo"></span>
-            <span class="mobile-burger"></span>
-            <div class="options not-toggled">
-                <div class="pages">
-                    <span id="projects">Projects</span>
-                    <span id="about">About Us</span>
-                    <span id="downloads">Downloads</span>
-                    <span id="documentation">Documentation</span>
-                </div>
-                <div class="socials">
-                    <a href="https://github.com/RazuProject" alt="RazuProject on GitHub"><span class="github"></span></a>
-                    <a href="https://discord.gg/mkbx4B4de2" alt="Visit the Razu Discord server"><span class="discord"></span></a>
-                    <a href="https://youtube.com/@RazuProject" alt="Razu Project on YouTube"><span class="youtube"></span></a>
-                    <a href="https://reddit.com/r/TheRazuProject" alt="r/TheRazuProject on Reddit"><span class="reddit"></span></a>
-                </div>
+
+    <nav class="navbar">
+        <div class="nav-center">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logo.png" alt="Razu Logo" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <a href="about.html">About Us</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="nav-socials">
+                <a href="https://github.com/RazuProject"><img src="assets/github.svg" class="social-icon" alt="GitHub"></a>
+                <a href="https://discord.gg/mkbx4B4de2"><img src="assets/discord.svg" class="social-icon" alt="Discord"></a>
+                <a href="https://youtube.com/@RazuProject"><img src="assets/youtube.svg" class="social-icon" alt="YouTube"></a>
             </div>
         </div>
-        <iframe title="Website Contents" id="page" scrolling="auto"></iframe>
-    </div>
-    <script src="index.js"></script>
-    <script src="redirects.js"></script>
+    </nav>
+
+    <main class="container">
+        <div class="hero">
+            <img src="assets/logo.svg" alt="Razu Project" style="max-width: 300px; margin-bottom: 2rem;">
+            <p style="font-size: 1.2rem; color: #aaa; max-width: 600px; margin: 0 auto;">
+                Small group of people who are passionate about Anki's products and robots, and want to make improvements to them to make them even better than before!
+                <br><br>
+                Stay tuned ( •̀ ω •́ )✧
+            </p>
+            <div style="margin-top: 2rem;">
+                <a href="https://discord.gg/mkbx4B4de2" class="btn" style="background-color: #5865F2; margin-left: 10px;">Discord</a>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
