@@ -37,6 +37,17 @@
             <iframe src="https://discord.com/widget?id=1217946650316767342&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             </div>
     </main>
+    
+    <script>
+    window.addEventListener('keydown', function(event) {
+      if (event.key === '.') {
+        const targetTag = event.target.tagName.toLowerCase();
+        if (targetTag !== 'input' && targetTag !== 'textarea' && !event.target.isContentEditable) {
+          window.location.href = 'https://github.com/RazuProject/RazuProject.github.io';
+        }
+      }
+    });
+    </script>
 
-</body>
+  </body>
 </html>

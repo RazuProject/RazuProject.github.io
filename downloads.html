@@ -33,7 +33,7 @@
         <div class="download-item">
             <div class="download-info">
                 <h3>cdn.lrdsnow's App Binaries</h3>
-                <p style="color: #aaa;">Go HERE to get your Anki products working again. Full vanilla archive, ripped with HTTrack.</p>
+                <p style="color: #aaa;">Go HERE to get your Anki products working again. Full vanilla archive.</p>
             </div>
             <div style="display: flex; gap: 10px;">
                 <a href="https://chrideefer.com/dev/razu/stuff/cdnlrdsnow/lrdsnow/anki/apps/index.html" class="btn">View and Download</a>
@@ -86,14 +86,25 @@
             <div class="download-info">
                 <h3>Pycozmo</h3>
                 <p style="color: #aaa;">Community-Driven Cozmo SDK alternative</p>
-                <p style="color: #ff7f7f;">Not Developed by Razu</p>
+                <p style="color: #aaa;">Not Developed by Razu</p>
             </div>
             <a href="https://github.com/zayfod/pycozmo" class="btn">View and Download</a>
 
         </div>
 
-<p style="color: #aaa; font-size: 9px; margin-top: 15px;">DDL lost their source code to the original Anki apps ;(</p>
+<p style="color: #aaa; font-size: 9px; margin-top: 15px;">DDL lost their source code to the original Anki apps and some models ;(</p>
     </main>
 
-</body>
+    <script>
+    window.addEventListener('keydown', function(event) {
+      if (event.key === '.') {
+        const targetTag = event.target.tagName.toLowerCase();
+        if (targetTag !== 'input' && targetTag !== 'textarea' && !event.target.isContentEditable) {
+          window.location.href = 'https://github.com/RazuProject/RazuProject.github.io';
+        }
+      }
+    });
+    </script>
+
+  </body>
 </html>
